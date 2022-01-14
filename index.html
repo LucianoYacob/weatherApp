@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container-fluid d-flex justify-content-center bg-night min-vh-100 py-5 px-0">
+        <div class="container-sm rounded-max border border-3 border-dark shadow p-0 bg-img-night">
+
+            <div class="row d-flex flex-column p-3 px-4">
+                <form>
+                    <input type="email" placeholder="Enter your location..." class="form-control" id="in-location">
+                    <!-- Hacer este boton flotante asi qda a la derecha del input -->
+                    <!-- <input type="submit" class="d-none"> -->
+                </form>
+
+                <div class="d-flex align-items-center justify-content-center input-temp-number">
+                    <div class="align-self-center text-light input-temp-celsius" id="degree-number">34</div>
+                    <div class=" align-self-center text-light input-temp-symbol">°C</div>
+                </div>
+                <div id="weather-icon"></div>
+                <div class="input-temp-description" id="description"></div>
+            </div>
+
+            <div class="row px-4" id="location">
+                <div class="location-city text-light" id="timezone">Argentina</div>
+                <div class="location-date text-light" id="date"></div>
+            </div>
+
+            <div class="row px-4" id="weather">
+                <div class="weather-min text-light">
+                    <small>Min</small>
+                    <span id="min-temp"></span>
+                    <b>°C</b>
+                </div>
+                <div class="weather-max text-light">
+                    <small>Max</small>
+                    <span id="max-temp"></span>
+                    <b>°C</b>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
