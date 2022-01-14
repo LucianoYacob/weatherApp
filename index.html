@@ -10,37 +10,47 @@
 <body>
     
     <div class="container-fluid d-flex justify-content-center bg-night min-vh-100 py-5 px-0">
-        <div class="container-sm rounded-max border border-3 border-dark shadow p-0 bg-img-night">
+        <div class="row justify-content-center container-sm rounded-max border border-3 border-dark shadow p-0 bg-img-night">
 
-            <div class="row d-flex flex-column p-3 px-4">
+            <div class="align-self-start d-flex flex-column p-3 px-4">
                 <form>
-                    <input type="email" placeholder="Enter your location..." class="form-control" id="in-location">
+                    <input type="email" placeholder="Enter your location..." class="form-control mb-3" id="in-location" autocomplete="off">
                     <!-- Hacer este boton flotante asi qda a la derecha del input -->
                     <!-- <input type="submit" class="d-none"> -->
                 </form>
 
-                <div class="d-flex align-items-center justify-content-center input-temp-number">
-                    <div class="align-self-center text-light input-temp-celsius" id="degree-number">34</div>
-                    <div class=" align-self-center text-light input-temp-symbol">°C</div>
+                <div class="d-flex align-items-center justify-content-center input-temp-number mb-3">
+                    <div class="input-temp-celsius">
+                        <span class="text-light display-4 fw-bold" id="degree-number">34</span>
+                    </div>
+                    <div>
+                        <span class="text-light input-temp-symbol fs-2">°C</span>
+                    </div>
                 </div>
                 <div id="weather-icon"></div>
-                <div class="input-temp-description" id="description"></div>
+                <div class="text-center input-temp-description">
+                    <span class="text-light fs-4 fw-bolder" id="description">Nubes Dispersas</span>
+                </div>
             </div>
 
-            <div class="row px-4" id="location">
-                <div class="location-city text-light" id="timezone">Argentina</div>
-                <div class="location-date text-light" id="date"></div>
+            <div class="align-self-center text-center row px-4 text-light" id="location">
+                <div class="location-city mb-3">
+                    <span class="fs-4 fw-bolder" id="timezone">Argentina</span>
+                </div>
+                <div class="location-date">
+                    <p class="fs-6" id="date">Ultima actualizacion del clima: 14 ene. 2022 11:12.</p>
+                </div>
             </div>
 
-            <div class="row px-4" id="weather">
-                <div class="weather-min text-light">
+            <div class="row justify-content-around align-self-end py-2 px-0" id="weather">
+                <div class="col-5 text-light weather-min bg-night-alpha rounded-pill text-center">
                     <small>Min</small>
-                    <span id="min-temp"></span>
+                    <span class="text-info" id="min-temp">38</span>
                     <b>°C</b>
                 </div>
-                <div class="weather-max text-light">
+                <div class="col-5 text-light d-inline-block weather-max bg-night-alpha rounded-pill text-center">
                     <small>Max</small>
-                    <span id="max-temp"></span>
+                    <span class="text-danger" id="max-temp">42</span>
                     <b>°C</b>
                 </div>
             </div>
