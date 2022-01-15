@@ -9,8 +9,8 @@
 </head>
 <body>
     
-    <div class="container-fluid d-flex justify-content-center bg-night min-vh-100 py-5 px-0">
-        <div class="row justify-content-center container-sm rounded-max border border-3 border-dark shadow p-0 bg-img-night">
+    <div class="container-fluid d-flex justify-content-center align-items-center bg-night min-vh-100 py-5 px-0">
+        <div class="row justify-content-center container-sm rounded-max border border-2 border-dark shadow p-0 bg-img-night">
 
             <div class="align-self-start d-flex flex-column p-3 px-4">
                 <form>
@@ -19,15 +19,17 @@
                     <!-- <input type="submit" class="d-none"> -->
                 </form>
 
-                <div class="d-flex align-items-center justify-content-center input-temp-number mb-3">
+                <div class="d-flex align-items-center justify-content-center input-temp-number mb-2">
                     <div class="input-temp-celsius">
-                        <span class="text-light display-4 fw-bold" id="degree-number">34</span>
+                        <span class="text-light display-1 fw-light" id="degree-number">34</span>
                     </div>
                     <div>
                         <span class="text-light input-temp-symbol fs-2">°C</span>
                     </div>
                 </div>
-                <div id="weather-icon"></div>
+                <div class="text-center mb-3" id="weather-icon">
+                    <img src="assets/icons/01d.png">
+                </div>
                 <div class="text-center input-temp-description">
                     <span class="text-light fs-4 fw-bolder" id="description">Nubes Dispersas</span>
                 </div>
