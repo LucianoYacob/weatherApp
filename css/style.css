@@ -95,6 +95,9 @@ input {
   line-height: inherit;
 }
 
+span{
+  text-shadow: 1px 1px 1px #000;
+}
 
 [type="submit"] {
   -webkit-appearance: button;
@@ -430,12 +433,21 @@ input {
   --bs-bg-opacity: 0.65;
   background-color: rgba(var(--bs-night-rgb), var(--bs-bg-opacity)) !important;
 }
-.bg-img-night {
+.bg-img-night, .bg-img-day {
   background-image: url("../assets/img/night.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.bg-img-night {
+  background-image: url("../assets/img/night.jpg");
+}
+.bg-img-day {
+  background-image: url("../assets/img/day.jpg");
+}
+
+
 .rounded-max {
   border-radius: 1rem !important;
 }

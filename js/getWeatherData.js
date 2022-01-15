@@ -1,4 +1,6 @@
+import changeBackground from "./changeBackground.js";
 import displayWeatherData from "./displayWeatherData.js";
+import getDataTime from "./getDataTime.js";
 
 const getWeatherData = async (city) => {
     const res = await fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${city}&units=metric&lang=sp`, {
@@ -15,14 +17,12 @@ const getWeatherData = async (city) => {
         console.log(`Error ${data.cod}: ${data.message}`);
         return;
     }
-    
-    if(data.list[0]){
-        //Cambiar la img de fondo de pantalla segun sea de dia o noche
-        // displayBackgroundImage(data);
 
-        //data es el obj q recuperamos de fetch
-        //Mostrar los datos en pantalla
-        displayWeatherData(data.list[0]);
+    if(data.list[0]){
+        let date = getDataTime(data.list[0].dt);
+        console.log(data);
+        changeBackground(date.hour);
+        displayWeatherData(data.list[0], date.date);
     }
     else{
         alert("The selected location doesn't exist");
