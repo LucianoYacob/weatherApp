@@ -1,20 +1,18 @@
+import getAPILocation from "./getAPILocation.js";
 import getWeatherData from "./getWeatherData.js";
 
 const $formSubmit = document.getElementById("search-submit");
 
-window.addEventListener("load", () => {
-    if("geolocation" in navigator){
-        getWeatherData("Estados Unidos");
-    }
-    else{
-        getWeatherData("Lujan");
-    }
+window.addEventListener("load", async () => {
+    let city = await getAPILocation();
+    if(city !== "" && city !== undefined) getWeatherData(city);
+    else getWeatherData("new york");
 });
 
 $formSubmit.addEventListener("submit", e => {
     e.preventDefault();
     if(e.target.searchInput.value === ""){
-        alert("Please put a place");
+        alert("Por favor digite un pais/provincia/estado o ciudad");
     }
     else{
         getWeatherData(e.target.searchInput.value);

@@ -433,8 +433,7 @@ span{
   --bs-bg-opacity: 0.65;
   background-color: rgba(var(--bs-night-rgb), var(--bs-bg-opacity)) !important;
 }
-.bg-img-night, .bg-img-day {
-  background-image: url("../assets/img/night.jpg");
+.bg-img-night, .bg-img-day, .bg-img-rain {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -445,6 +444,9 @@ span{
 }
 .bg-img-day {
   background-image: url("../assets/img/day.jpg");
+}
+.bg-img-rain {
+  background-image: url("../assets/img/rain.jpg");
 }
 
 

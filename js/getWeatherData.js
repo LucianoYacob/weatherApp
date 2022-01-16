@@ -14,18 +14,17 @@ const getWeatherData = async (city) => {
 
     if(!res.ok){
         alert(`Hubo un error al realizar la consulta`);
-        console.log(`Error ${data.cod}: ${data.message}`);
+        console.error(`Error ${data.cod}: ${data.message}`);
         return;
     }
 
     if(data.list[0]){
         let date = getDataTime(data.list[0].dt);
-        console.log(data);
-        changeBackground(date.hour);
+        changeBackground(data.list[0].rain, date.hour);
         displayWeatherData(data.list[0], date.date);
     }
     else{
-        alert("The selected location doesn't exist");
+        alert("La lubicacion ingresada no fue encontrada.");
     }
 }
 
